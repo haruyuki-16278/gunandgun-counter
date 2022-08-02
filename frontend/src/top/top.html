@@ -1,5 +1,7 @@
-<div x-data="top" :class="$store.defaultStyle">
-  <h1 x-text="title"></h1>
-  <p>I'm top</p>
-  <a href="#page2">go to page2</a>
+<div x-data="top" :class="pageStyle">
+  <div :class="titleWrapperStyle">
+    <span :class="titleAlignLeft">ガンナガン</span>
+    <span :class="titleAlignRight">カウンター</span>
+  </div>
+  <a href="#page2" :class="$store.defaultButton">go to page2</a>
 </div>
