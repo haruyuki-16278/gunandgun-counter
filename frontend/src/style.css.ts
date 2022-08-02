@@ -6,6 +6,7 @@ export const [themeClass, vars] = createTheme({
     secondary: '#e6b567',
     accent: '#9e5aad',
     text: '#f5f5f5',
+    textOnWhite: '#3d3d3d',
     background: '#3f4c4d'
   }, 
   constants: {
@@ -37,6 +38,7 @@ export const defaultButton = style({
   margin: '8px',
   padding: '8px 16px',
   borderRadius: '100vh',
+  color: vars.color.textOnWhite,
   backgroundColor: vars.color.primary,
   ':hover': {
     opacity: 0.8
