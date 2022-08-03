@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { defaultStyle, flexCenter, vars } from '../style.css'
+import { defaultStyle, flexCenter, vars } from '../../style.css'
 
 export const topPageStyle = style([
   defaultStyle,
