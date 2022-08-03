@@ -1,7 +1,7 @@
 // 参考: https://github.com/melnikaite/alpine-router
 
 import { init as topInit } from './pages/top/top'
-import { init as page2Init } from './pages/scoreboard/scoreboard'
+import { init as scoreboardInit } from './pages/scoreboard/scoreboard'
 
 window.addEventListener('hashchange', onRouteChange)
 onRouteChange()
@@ -16,7 +16,7 @@ async function loadRoute(appElement: HTMLElement) {
   switch (window.location.hash) {
     case '#scoreboard':
       appElement.innerHTML = await fetch(new URL('./pages/scoreboard/scoreboard.html', import.meta.url).href).then(template => template.text())
-      page2Init()
+      scoreboardInit()
       break
     case '#top':
     default:
