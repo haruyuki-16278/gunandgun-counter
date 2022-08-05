@@ -1,5 +1,18 @@
-<div x-data="scoreboard">
-  <h1 x-text="title"></h1>
-  <p>I'm scoreboard</p>
-  <a href="#top">go to top</a>
+<div x-data="scoreboard" :class="pageStyle">
+  <div :class="playerPanelStyle">
+    <div :class="scoreOperatorStyle">
+      <div :class="$store.defaultButton" @click="player1.heal()">+</div>
+      <span :class="hitpointStyle" x-text="player1.hitpoint"></span>
+      <div :class="$store.defaultButton" @click="player1.damege()">-</div>
+    </div>
+    <span :class="$store.flexCenter" x-text="player1.name"></span>
+  </div>
+  <div :class="playerPanelStyle">
+    <div :class="scoreOperatorStyle">
+      <div :class="$store.defaultButton" @click="player2.heal()">+</div>
+      <span :class="hitpointStyle" x-text="player2.hitpoint"></span>
+      <div :class="$store.defaultButton" @click="player2.damege()">-</div>
+    </div>
+    <span :class="$store.flexCenter" x-text="player2.name"></span>
+  </div>
 </div>

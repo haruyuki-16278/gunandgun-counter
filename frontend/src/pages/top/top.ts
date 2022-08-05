@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs'
 import { titleAlignLeft, titleAlignRight, titleWrapper, topPageStyle } from './top.css'
 
-export const init = () => {
+export const topInit = () => {
   console.log('top called')
   Alpine.data('top', () => ({
     pageStyle: topPageStyle,

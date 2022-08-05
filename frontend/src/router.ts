@@ -1,7 +1,7 @@
 // 参考: https://github.com/melnikaite/alpine-router
 
-import { init as topInit } from './pages/top/top'
-import { init as scoreboardInit } from './pages/scoreboard/scoreboard'
+import { topInit } from './pages/top/top'
+import { scoreboardInit } from './pages/scoreboard/scoreboard'
 
 window.addEventListener('hashchange', onRouteChange)
 onRouteChange()

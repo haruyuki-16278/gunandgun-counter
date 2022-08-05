@@ -7,7 +7,8 @@ export const [themeClass, vars] = createTheme({
     accent: '#9e5aad',
     text: '#f5f5f5',
     textOnWhite: '#3d3d3d',
-    background: '#3f4c4d'
+    background: '#3f4c4d',
+    backgroundWhite: '#edf2f0'
   }, 
   constants: {
     small: '8px',
@@ -31,6 +32,12 @@ export const defaultStyle = style({
 export const flexCenter = style({
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center'
+})
+
+export const flexBetween = style({
+  display: 'flex',
+  justifyContent: 'space-between',
   alignItems: 'center'
 })
 
