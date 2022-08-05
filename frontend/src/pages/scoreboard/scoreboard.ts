@@ -58,6 +58,7 @@ const player = (name: string) => {
       this.hitpoint--
       if (this.hitpoint === 0) {
         window.alert('gameend')
+        window.location.href='#top'
       }
     },
     heal() {this.hitpoint++},
