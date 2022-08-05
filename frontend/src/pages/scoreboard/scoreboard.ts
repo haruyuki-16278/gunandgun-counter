@@ -3,6 +3,8 @@ import {
   dangerHitpointStyle,
   defaultHitpointStyle, 
   playerPanelStyle, 
+  rotetedPlayerPanelStyle, 
+  rotateButtonStyle,
   scoreboardPageStyle, 
   scoreOperatorStyle,
   warnHitpointStyle
@@ -12,10 +14,18 @@ export const scoreboardInit = () => {
   console.log('scoreboard called')
   Alpine.data('scoreboard', () => ({
     pageStyle: scoreboardPageStyle,
-    playerPanelStyle: playerPanelStyle,
+    playerPanelStyle(player: 'player1'|'player2') {
+      switch (player) {
+        case 'player1':
+          return this.player1.panelRotate ? rotetedPlayerPanelStyle : playerPanelStyle
+          break;
+        case 'player2':
+          return this.player2.panelRotate ? rotetedPlayerPanelStyle : playerPanelStyle
+          break;
+      }
+    },
+    rotateButtonStyle: rotateButtonStyle,
     scoreOperatorStyle: scoreOperatorStyle,
-    player1: player('player1'),
-    player2: player('player2'),
     hitpointStyle(player: 'player1'|'player2') {
       if (player === 'player1') {
         if (this.player1.hitpoint <= 10) {
@@ -33,7 +43,9 @@ export const scoreboardInit = () => {
         return defaultHitpointStyle
       }
       return
-    }
+    },
+    player1: player('player1'),
+    player2: player('player2')
   }))
 }
 
@@ -48,6 +60,8 @@ const player = (name: string) => {
         window.alert('gameend')
       }
     },
-    heal() {this.hitpoint++}
+    heal() {this.hitpoint++},
+    panelRotate: false,
+    rotate() {this.panelRotate = !this.panelRotate}
   }
 }

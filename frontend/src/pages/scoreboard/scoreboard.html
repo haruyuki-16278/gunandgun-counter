@@ -1,5 +1,6 @@
 <div x-data="scoreboard" :class="pageStyle">
-  <div :class="playerPanelStyle">
+  <div :class="playerPanelStyle('player1')">
+    <div :class="rotateButtonStyle" @click="player1.rotate()">rotate</div>
     <div :class="scoreOperatorStyle">
       <div :class="$store.defaultButton" @click="player1.heal()">+</div>
       <span :class="hitpointStyle('player1')" x-text="player1.hitpoint"></span>
@@ -7,7 +8,8 @@
     </div>
     <span :class="$store.flexCenter" x-text="player1.name"></span>
   </div>
-  <div :class="playerPanelStyle">
+  <div :class="playerPanelStyle('player2')">
+    <div :class="rotateButtonStyle" @click="player2.rotate()">rotate</div>
     <div :class="scoreOperatorStyle">
       <div :class="$store.defaultButton" @click="player2.heal()">+</div>
       <span :class="hitpointStyle('player2')" x-text="player2.hitpoint"></span>

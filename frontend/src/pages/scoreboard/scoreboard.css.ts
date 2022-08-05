@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { defaultStyle, flexBetween, flexCenter, vars } from '../../style.css'
+import { defaultButton, defaultStyle, flexBetween, flexCenter, vars } from '../../style.css'
 
 export const scoreboardPageStyle = style([
   defaultStyle,
@@ -28,6 +28,22 @@ export const playerPanelStyle = style({
   alignItems: 'center',
   justifyContent: 'center'
 })
+
+export const rotetedPlayerPanelStyle = style([
+  playerPanelStyle,
+  {
+    transform: 'rotate(180deg)'
+  }
+])
+
+export const rotateButtonStyle = style([
+  defaultButton,
+  {
+    position: 'absolute',
+    top: vars.constants.medium,
+    right: vars.constants.medium
+  }
+])
 
 export const scoreOperatorStyle = style([
   flexBetween,
