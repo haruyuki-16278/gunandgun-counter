@@ -36,9 +36,23 @@ export const scoreOperatorStyle = style([
   }
 ])
 
-export const hitpointStyle = style({
+export const defaultHitpointStyle = style({
   fontSize: vars.constants.large,
   fontWeight: 'bolder',
   color: vars.color.primary,
   textShadow: `${vars.color.backgroundWhite} 0 0 5px`
 })
+
+export const warnHitpointStyle = style([
+  defaultHitpointStyle,
+  {
+    color: vars.color.secondary
+  }
+])
+
+export const dangerHitpointStyle = style([
+  defaultHitpointStyle,
+  {
+    color: vars.color.accent
+  }
+])
