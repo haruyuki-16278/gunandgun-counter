@@ -1,5 +1,17 @@
 import { createTheme, style } from '@vanilla-extract/css'
 
+/**
+ * make style that has same width and height
+ * @param size number px size
+ * @returns style
+ */
+const size = (size: number) => {
+  return style({
+    width: `${size}px`,
+    height: `${size}px`
+  })
+}
+
 export const [themeClass, vars] = createTheme({
   color: {
     primary: '#9cdbc7',
@@ -51,3 +63,18 @@ export const defaultButton = style({
     opacity: 0.8
   }
 })
+
+export const defaultIcon = style([
+  flexCenter,
+  size(24),
+])
+
+export const iconButton = style([
+  flexCenter,
+  {
+    padding: vars.constants.small,
+    borderRadius: '100vh',
+    backgroundColor: vars.color.primary,
+    fill: vars.color.textOnWhite
+  }
+])

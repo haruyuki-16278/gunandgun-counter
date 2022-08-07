@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { defaultButton, defaultStyle, flexBetween, flexCenter, vars } from '../../style.css'
+import { defaultStyle, flexBetween, flexCenter, iconButton, vars } from '../../style.css'
 
 export const scoreboardPageStyle = style([
   defaultStyle,
@@ -37,7 +37,7 @@ export const rotetedPlayerPanelStyle = style([
 ])
 
 export const rotateButtonStyle = style([
-  defaultButton,
+  iconButton,
   {
     position: 'absolute',
     top: vars.constants.medium,
@@ -53,10 +53,10 @@ export const scoreOperatorStyle = style([
 ])
 
 export const defaultHitpointStyle = style({
+  fontFamily: vars.fonts.notoSans,
   fontSize: vars.constants.large,
   fontWeight: 'bolder',
-  color: vars.color.primary,
-  textShadow: `${vars.color.backgroundWhite} 0 0 5px`
+  color: vars.color.textOnWhite,
 })
 
 export const warnHitpointStyle = style([
