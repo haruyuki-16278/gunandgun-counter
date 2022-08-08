@@ -53,7 +53,7 @@ export const scoreOperatorStyle = style([
 ])
 
 export const defaultHitpointStyle = style({
-  fontFamily: vars.fonts.notoSans,
+  fontFamily: vars.fonts.GAGAGAGA,
   fontSize: vars.constants.large,
   fontWeight: 'bolder',
   color: vars.color.textOnWhite,
