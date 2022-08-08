@@ -16,6 +16,8 @@ dist-ssr
 frontend/.yarn/*
 !frontend/.yarn/releases
 
+fonts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
