@@ -29,6 +29,7 @@ export const [themeClass, vars] = createTheme({
   },
   fonts: {
     kleeOne: '"Klee One", cursive',
+    GAGAGAGA: 'GAGAGAGA, sans-serif',
     notoSans: '"Noto Sans JP", sans-serif'
   }
 })
@@ -38,7 +39,7 @@ export const defaultStyle = style({
   height: '100%',
   backgroundColor: vars.color.background,
   color: vars.color.text,
-  fontFamily: vars.fonts.kleeOne
+  fontFamily: vars.fonts.notoSans
 })
 
 export const flexCenter = style({
