@@ -14,7 +14,8 @@ serve(async (req) => {
   return serveDir(req, {
     fsRoot: 'dist',
     urlRoot: '',
-    showDirListing: false,
+    // showDirListingがtrueだと、root直下のindex.htmlをトップにアクセスしても返してくれる
+    showDirListing: true,
     enableCors: true
   })
 })
