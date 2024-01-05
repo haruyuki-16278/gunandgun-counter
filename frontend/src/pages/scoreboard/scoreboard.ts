@@ -10,6 +10,8 @@ import {
   warnHitpointStyle
 } from './scoreboard.css'
 
+let wakelock: any | null = null;
+
 export const scoreboardInit = () => {
   Alpine.data('scoreboard', () => ({
     pageStyle: scoreboardPageStyle,
@@ -46,6 +48,14 @@ export const scoreboardInit = () => {
     player1: player('player1'),
     player2: player('player2')
   }))
+
+  if ('wakeLock' in navigator) {
+    try {
+      navigator.wakeLock.request('screen').then((v) => wakelock = v)
+    } catch (e) {
+      console.error(e)
+    }
+  }
 }
 
 const player = (name: string) => {
@@ -55,6 +65,7 @@ const player = (name: string) => {
     damege() {
       this.hitpoint--
       if (this.hitpoint === 0) {
+        if (wakelock) wakelock.release().then(() => wakelock = null)
         window.alert('gameend')
         window.location.href='#top'
       }
