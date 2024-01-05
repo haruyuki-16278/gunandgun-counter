@@ -3,8 +3,6 @@ import { themeClass, defaultStyle, defaultButton, flexCenter, flexBetween, defau
 
 window.Alpine = Alpine
 
-console.log(themeClass)
-
 Alpine.store('theme', themeClass)
 Alpine.store('defaultStyle', defaultStyle)
 Alpine.store('defaultButton', defaultButton)

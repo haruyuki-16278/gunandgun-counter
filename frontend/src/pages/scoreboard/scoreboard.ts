@@ -11,7 +11,6 @@ import {
 } from './scoreboard.css'
 
 export const scoreboardInit = () => {
-  console.log('scoreboard called')
   Alpine.data('scoreboard', () => ({
     pageStyle: scoreboardPageStyle,
     playerPanelStyle(player: 'player1'|'player2') {
@@ -50,7 +49,6 @@ export const scoreboardInit = () => {
 }
 
 const player = (name: string) => {
-  console.log('call create player')
   return {
     name: name,
     hitpoint: 30,
