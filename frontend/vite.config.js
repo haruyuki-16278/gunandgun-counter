@@ -7,7 +7,7 @@ const pwaOptions = {
   registerType: 'prompt', 
   manifest: {
     name: 'ガンナガンカウンター',
-    shortname: 'ggcnt',
+    short_name: 'ガンナガンカウンター',
     description: 'ガンナガンプレイ時に便利なカウンターアプリ',
     start_url: 'index.html',
     background_color: '#3f4c4d',
