@@ -33,3 +33,6 @@ jobs:
         with:
           project: gunandgun-counter # the name of the project on Deno Deploy
           entrypoint: server.js # the entrypoint to deploy
+          include: |
+            dist
+            server.js
